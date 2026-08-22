@@ -1,0 +1,50 @@
+import { define_crud, define_module } from "@opus-perpetuus/imperium-core-kit";
+import { inventory_physical_count_pages } from "./inventory-physical-count.pages.ts";
+import { inventory_physical_count_tables } from "./inventory-physical-count.tables.ts";
+
+export const inventory_physical_count_module = define_module({
+  resource: "inventory-physical-count",
+  labels: {
+    singular: "Conteo físico",
+    plural: "Conteo físico",
+    read: "Ver Conteo físico",
+    write: "Editar Conteo físico",
+  },
+  routes: define_crud({
+    resource: "inventory-physical-count",
+    table: "inventory_physical_count",
+    soft_delete: true,
+    soft_delete_field: "is_active",
+    history: true,
+    default_sort: "name:asc",
+    id_prefix: "inventor",
+    fields: {
+      name: { type: "string", required: true, search: true },
+      description: { type: "string", search: true },
+      is_active: { type: "boolean" },
+      state: { type: "string" },
+      ref: { type: "string", search: true },
+      search_field: { type: "string", search: true },
+      created_by: { type: "string" },
+      custom_data: { type: "json" },
+      payload: { type: "json" },
+      ubicacion_codigo: { type: "string", search: true },
+      estado: { type: "string", search: true },
+      fecha: { type: "string", search: true },
+      contado_por: { type: "string", search: true },
+      total_lineas: { type: "string", search: true },
+      producto: { type: "string", search: true },
+      producto_nombre: { type: "string", search: true },
+      producto_codigo: { type: "string", search: true },
+      cantidad_sistema: { type: "number" },
+      cantidad_contada: { type: "number" },
+      diferencia: { type: "number" },
+      ubicacion: { type: "string", search: true },
+      lineas: { type: "json" },
+    },
+    options_map: { value: "id", label: "name" },
+  }),
+  tables: inventory_physical_count_tables,
+  pages: inventory_physical_count_pages,
+  menu: [],
+});

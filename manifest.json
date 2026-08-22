@@ -1,0 +1,275 @@
+{
+  "id": "SUBJECT-almacen",
+  "technicalId": "subject-almacen",
+  "name": "Almacén",
+  "version": "0.1.0",
+  "image": "ghcr.io/opus-perpetuus/subject-almacen:0.1.0",
+  "compat": {
+    "nox": ">=0.5.0",
+    "kit": "^0.5.0"
+  },
+  "api": {
+    "basePath": "/",
+    "port": 3000,
+    "healthPath": "/health"
+  },
+  "permissions": [
+    {
+      "id": "subject.almacen.unit-of-measure.read",
+      "label": "Ver Unidades de medida"
+    },
+    {
+      "id": "subject.almacen.unit-of-measure.write",
+      "label": "Editar Unidades de medida"
+    },
+    {
+      "id": "subject.almacen.products.read",
+      "label": "Ver Productos"
+    },
+    {
+      "id": "subject.almacen.products.write",
+      "label": "Editar Productos"
+    },
+    {
+      "id": "subject.almacen.inventory-stock-quant.read",
+      "label": "Ver Existencias por ubicación"
+    },
+    {
+      "id": "subject.almacen.inventory-stock-quant.write",
+      "label": "Editar Existencias por ubicación"
+    },
+    {
+      "id": "subject.almacen.inventory-internal-location.read",
+      "label": "Ver Ubicaciones internas"
+    },
+    {
+      "id": "subject.almacen.inventory-internal-location.write",
+      "label": "Editar Ubicaciones internas"
+    },
+    {
+      "id": "subject.almacen.inventory-physical-count.read",
+      "label": "Ver Conteo físico"
+    },
+    {
+      "id": "subject.almacen.inventory-physical-count.write",
+      "label": "Editar Conteo físico"
+    },
+    {
+      "id": "subject.almacen.inventory-cost-entry.read",
+      "label": "Ver Entradas de costo"
+    },
+    {
+      "id": "subject.almacen.inventory-cost-entry.write",
+      "label": "Editar Entradas de costo"
+    },
+    {
+      "id": "subject.almacen.inventory-reception.read",
+      "label": "Ver Recepciones"
+    },
+    {
+      "id": "subject.almacen.inventory-reception.write",
+      "label": "Editar Recepciones"
+    },
+    {
+      "id": "subject.almacen.pedidos.read",
+      "label": "Ver Pedidos (almacén)"
+    },
+    {
+      "id": "subject.almacen.pedidos.write",
+      "label": "Editar Pedidos (almacén)"
+    },
+    {
+      "id": "subject.almacen.pedidos-surtir.read",
+      "label": "Ver Por surtir"
+    },
+    {
+      "id": "subject.almacen.pedidos-surtir.write",
+      "label": "Editar Por surtir"
+    },
+    {
+      "id": "subject.almacen.inventory-movement.read",
+      "label": "Ver Movimientos de inventario"
+    },
+    {
+      "id": "subject.almacen.inventory-movement.write",
+      "label": "Editar Movimientos de inventario"
+    }
+  ],
+  "pages": [
+    {
+      "id": "almacen.unit-of-measure",
+      "path": "unit-of-measure",
+      "permission": "subject.almacen.unit-of-measure.read"
+    },
+    {
+      "id": "almacen.products",
+      "path": "products",
+      "permission": "subject.almacen.products.read"
+    },
+    {
+      "id": "almacen.inventory-stock-quant",
+      "path": "inventory-stock-quant",
+      "permission": "subject.almacen.inventory-stock-quant.read"
+    },
+    {
+      "id": "almacen.inventory-internal-location",
+      "path": "inventory-internal-location",
+      "permission": "subject.almacen.inventory-internal-location.read"
+    },
+    {
+      "id": "almacen.inventory-physical-count",
+      "path": "inventory-physical-count",
+      "permission": "subject.almacen.inventory-physical-count.read"
+    },
+    {
+      "id": "almacen.inventory-cost-entry",
+      "path": "inventory-cost-entry",
+      "permission": "subject.almacen.inventory-cost-entry.read"
+    },
+    {
+      "id": "almacen.inventory-reception",
+      "path": "inventory-reception",
+      "permission": "subject.almacen.inventory-reception.read"
+    },
+    {
+      "id": "almacen.pedidos",
+      "path": "pedidos",
+      "permission": "subject.almacen.pedidos.read"
+    },
+    {
+      "id": "almacen.pedidos-surtir",
+      "path": "pedidos-surtir",
+      "permission": "subject.almacen.pedidos-surtir.read"
+    },
+    {
+      "id": "almacen.inventory-movement",
+      "path": "inventory-movement",
+      "permission": "subject.almacen.inventory-movement.read"
+    }
+  ],
+  "menu": [
+    {
+      "id": "almacen.root",
+      "label": "Almacén",
+      "order": 0,
+      "children": [
+        {
+          "id": "almacen.products",
+          "label": "Productos",
+          "order": 10,
+          "pageId": "almacen.products",
+          "path": "products",
+          "permission": "subject.almacen.products.read"
+        },
+        {
+          "id": "almacen.unit-of-measure",
+          "label": "Unidades de medida",
+          "order": 15,
+          "pageId": "almacen.unit-of-measure",
+          "path": "unit-of-measure",
+          "permission": "subject.almacen.unit-of-measure.read"
+        },
+        {
+          "id": "almacen.folder.menu-management-inventory-stock",
+          "label": "Ubicaciones y existencias",
+          "order": 20,
+          "children": [
+            {
+              "id": "almacen.inventory-internal-location",
+              "label": "Ubicaciones internas",
+              "order": 10,
+              "pageId": "almacen.inventory-internal-location",
+              "path": "inventory-internal-location",
+              "permission": "subject.almacen.inventory-internal-location.read"
+            },
+            {
+              "id": "almacen.inventory-stock-quant",
+              "label": "Existencias por ubicación",
+              "order": 20,
+              "pageId": "almacen.inventory-stock-quant",
+              "path": "inventory-stock-quant",
+              "permission": "subject.almacen.inventory-stock-quant.read"
+            },
+            {
+              "id": "almacen.inventory-physical-count",
+              "label": "Conteo físico",
+              "order": 30,
+              "pageId": "almacen.inventory-physical-count",
+              "path": "inventory-physical-count",
+              "permission": "subject.almacen.inventory-physical-count.read"
+            }
+          ]
+        },
+        {
+          "id": "almacen.folder.menu-management-inventory-inbound",
+          "label": "Entradas",
+          "order": 30,
+          "children": [
+            {
+              "id": "almacen.inventory-reception",
+              "label": "Recepciones",
+              "order": 10,
+              "pageId": "almacen.inventory-reception",
+              "path": "inventory-reception",
+              "permission": "subject.almacen.inventory-reception.read"
+            },
+            {
+              "id": "almacen.inventory-cost-entry",
+              "label": "Entradas de costo",
+              "order": 20,
+              "pageId": "almacen.inventory-cost-entry",
+              "path": "inventory-cost-entry",
+              "permission": "subject.almacen.inventory-cost-entry.read"
+            }
+          ]
+        },
+        {
+          "id": "almacen.inventory-movement",
+          "label": "Movimientos de inventario",
+          "order": 40,
+          "pageId": "almacen.inventory-movement",
+          "path": "inventory-movement",
+          "permission": "subject.almacen.inventory-movement.read"
+        },
+        {
+          "id": "almacen.folder.menu-management-inventory-picking",
+          "label": "Surtido",
+          "order": 50,
+          "children": [
+            {
+              "id": "almacen.pedidos-surtir",
+              "label": "Por surtir",
+              "order": 10,
+              "pageId": "almacen.pedidos-surtir",
+              "path": "pedidos-surtir",
+              "permission": "subject.almacen.pedidos-surtir.read"
+            },
+            {
+              "id": "almacen.pedidos",
+              "label": "Pedidos (almacén)",
+              "order": 20,
+              "pageId": "almacen.pedidos",
+              "path": "pedidos",
+              "permission": "subject.almacen.pedidos.read"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "domain": "shared-nox-postgres"
+  },
+  "resources": {
+    "unit-of-measure": "unit_of_measure",
+    "products": "products",
+    "inventory-stock-quant": "inventory_stock_quant",
+    "inventory-internal-location": "inventory_internal_location",
+    "inventory-physical-count": "inventory_physical_count",
+    "inventory-cost-entry": "inventory_cost_entry",
+    "inventory-reception": "inventory_reception",
+    "pedidos": "pedidos",
+    "pedidos-surtir": "pedidos_surtir",
+    "inventory-movement": "inventory_movement"
+  }
+}
