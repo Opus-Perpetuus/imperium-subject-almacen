@@ -95,6 +95,126 @@
       "label": "Editar Movimientos de inventario"
     }
   ],
+  "menu": [
+    {
+      "id": "almacen.root",
+      "label": "Almacén",
+      "order": 0,
+      "children": [
+        {
+          "id": "almacen.products",
+          "label": "Productos",
+          "pageId": "almacen.products",
+          "order": 10,
+          "path": "products",
+          "permission": "subject.almacen.products.read",
+          "icon": "document"
+        },
+        {
+          "id": "almacen.unit-of-measure",
+          "label": "Unidades de medida",
+          "pageId": "almacen.unit-of-measure",
+          "order": 15,
+          "path": "unit-of-measure",
+          "permission": "subject.almacen.unit-of-measure.read",
+          "icon": "document"
+        },
+        {
+          "id": "almacen.folder.menu-management-inventory-stock",
+          "label": "Ubicaciones y existencias",
+          "order": 20,
+          "children": [
+            {
+              "id": "almacen.inventory-internal-location",
+              "label": "Ubicaciones internas",
+              "pageId": "almacen.inventory-internal-location",
+              "order": 10,
+              "path": "inventory-internal-location",
+              "permission": "subject.almacen.inventory-internal-location.read",
+              "icon": "document"
+            },
+            {
+              "id": "almacen.inventory-stock-quant",
+              "label": "Existencias por ubicación",
+              "pageId": "almacen.inventory-stock-quant",
+              "order": 20,
+              "path": "inventory-stock-quant",
+              "permission": "subject.almacen.inventory-stock-quant.read",
+              "icon": "document"
+            },
+            {
+              "id": "almacen.inventory-physical-count",
+              "label": "Conteo físico",
+              "pageId": "almacen.inventory-physical-count",
+              "order": 30,
+              "path": "inventory-physical-count",
+              "permission": "subject.almacen.inventory-physical-count.read",
+              "icon": "document"
+            }
+          ]
+        },
+        {
+          "id": "almacen.folder.menu-management-inventory-inbound",
+          "label": "Entradas",
+          "order": 30,
+          "children": [
+            {
+              "id": "almacen.inventory-reception",
+              "label": "Recepciones",
+              "pageId": "almacen.inventory-reception",
+              "order": 10,
+              "path": "inventory-reception",
+              "permission": "subject.almacen.inventory-reception.read",
+              "icon": "document"
+            },
+            {
+              "id": "almacen.inventory-cost-entry",
+              "label": "Entradas de costo",
+              "pageId": "almacen.inventory-cost-entry",
+              "order": 20,
+              "path": "inventory-cost-entry",
+              "permission": "subject.almacen.inventory-cost-entry.read",
+              "icon": "document"
+            }
+          ]
+        },
+        {
+          "id": "almacen.inventory-movement",
+          "label": "Movimientos de inventario",
+          "pageId": "almacen.inventory-movement",
+          "order": 40,
+          "path": "inventory-movement",
+          "permission": "subject.almacen.inventory-movement.read",
+          "icon": "document"
+        },
+        {
+          "id": "almacen.folder.menu-management-inventory-picking",
+          "label": "Surtido",
+          "order": 50,
+          "children": [
+            {
+              "id": "almacen.pedidos-surtir",
+              "label": "Por surtir",
+              "pageId": "almacen.pedidos-surtir",
+              "order": 10,
+              "path": "pedidos-surtir",
+              "permission": "subject.almacen.pedidos-surtir.read",
+              "icon": "document"
+            },
+            {
+              "id": "almacen.pedidos",
+              "label": "Pedidos (almacén)",
+              "pageId": "almacen.pedidos",
+              "order": 20,
+              "path": "pedidos",
+              "permission": "subject.almacen.pedidos.read",
+              "icon": "document"
+            }
+          ]
+        }
+      ]
+    }
+  ],
   "pages": [
     {
       "id": "almacen.unit-of-measure",
@@ -147,129 +267,20 @@
       "permission": "subject.almacen.inventory-movement.read"
     }
   ],
-  "menu": [
-    {
-      "id": "almacen.root",
-      "label": "Almacén",
-      "order": 0,
-      "children": [
-        {
-          "id": "almacen.products",
-          "label": "Productos",
-          "order": 10,
-          "pageId": "almacen.products",
-          "path": "products",
-          "permission": "subject.almacen.products.read"
-        },
-        {
-          "id": "almacen.unit-of-measure",
-          "label": "Unidades de medida",
-          "order": 15,
-          "pageId": "almacen.unit-of-measure",
-          "path": "unit-of-measure",
-          "permission": "subject.almacen.unit-of-measure.read"
-        },
-        {
-          "id": "almacen.folder.menu-management-inventory-stock",
-          "label": "Ubicaciones y existencias",
-          "order": 20,
-          "children": [
-            {
-              "id": "almacen.inventory-internal-location",
-              "label": "Ubicaciones internas",
-              "order": 10,
-              "pageId": "almacen.inventory-internal-location",
-              "path": "inventory-internal-location",
-              "permission": "subject.almacen.inventory-internal-location.read"
-            },
-            {
-              "id": "almacen.inventory-stock-quant",
-              "label": "Existencias por ubicación",
-              "order": 20,
-              "pageId": "almacen.inventory-stock-quant",
-              "path": "inventory-stock-quant",
-              "permission": "subject.almacen.inventory-stock-quant.read"
-            },
-            {
-              "id": "almacen.inventory-physical-count",
-              "label": "Conteo físico",
-              "order": 30,
-              "pageId": "almacen.inventory-physical-count",
-              "path": "inventory-physical-count",
-              "permission": "subject.almacen.inventory-physical-count.read"
-            }
-          ]
-        },
-        {
-          "id": "almacen.folder.menu-management-inventory-inbound",
-          "label": "Entradas",
-          "order": 30,
-          "children": [
-            {
-              "id": "almacen.inventory-reception",
-              "label": "Recepciones",
-              "order": 10,
-              "pageId": "almacen.inventory-reception",
-              "path": "inventory-reception",
-              "permission": "subject.almacen.inventory-reception.read"
-            },
-            {
-              "id": "almacen.inventory-cost-entry",
-              "label": "Entradas de costo",
-              "order": 20,
-              "pageId": "almacen.inventory-cost-entry",
-              "path": "inventory-cost-entry",
-              "permission": "subject.almacen.inventory-cost-entry.read"
-            }
-          ]
-        },
-        {
-          "id": "almacen.inventory-movement",
-          "label": "Movimientos de inventario",
-          "order": 40,
-          "pageId": "almacen.inventory-movement",
-          "path": "inventory-movement",
-          "permission": "subject.almacen.inventory-movement.read"
-        },
-        {
-          "id": "almacen.folder.menu-management-inventory-picking",
-          "label": "Surtido",
-          "order": 50,
-          "children": [
-            {
-              "id": "almacen.pedidos-surtir",
-              "label": "Por surtir",
-              "order": 10,
-              "pageId": "almacen.pedidos-surtir",
-              "path": "pedidos-surtir",
-              "permission": "subject.almacen.pedidos-surtir.read"
-            },
-            {
-              "id": "almacen.pedidos",
-              "label": "Pedidos (almacén)",
-              "order": 20,
-              "pageId": "almacen.pedidos",
-              "path": "pedidos",
-              "permission": "subject.almacen.pedidos.read"
-            }
-          ]
-        }
-      ]
-    }
-  ],
   "storage": {
-    "domain": "shared-nox-postgres"
+    "domain": "shared-nox-postgres",
+    "files": false
   },
   "resources": {
-    "unit-of-measure": "unit_of_measure",
+    "unit-of-measure": "unit-of-measure",
     "products": "products",
-    "inventory-stock-quant": "inventory_stock_quant",
-    "inventory-internal-location": "inventory_internal_location",
-    "inventory-physical-count": "inventory_physical_count",
-    "inventory-cost-entry": "inventory_cost_entry",
-    "inventory-reception": "inventory_reception",
+    "inventory-stock-quant": "inventory-stock-quant",
+    "inventory-internal-location": "inventory-internal-location",
+    "inventory-physical-count": "inventory-physical-count",
+    "inventory-cost-entry": "inventory-cost-entry",
+    "inventory-reception": "inventory-reception",
     "pedidos": "pedidos",
-    "pedidos-surtir": "pedidos_surtir",
-    "inventory-movement": "inventory_movement"
+    "pedidos-surtir": "pedidos-surtir",
+    "inventory-movement": "inventory-movement"
   }
 }
