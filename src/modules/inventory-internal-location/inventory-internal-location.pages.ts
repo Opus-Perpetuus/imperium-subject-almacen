@@ -52,11 +52,22 @@ export const inventory_internal_location_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "codigo", component: "input-text", label: "codigo" },
-              { name: "tipo", component: "input-text", label: "tipo" },
-              { name: "parent", component: "input-text", label: "parent" },
+              {
+                name: "tipo",
+                component: "input-menu",
+                label: "tipo",
+                options: [
+                  { value: "almacen", label: "Almacén" },
+                  { value: "logistica", label: "Logística" },
+                  { value: "transito", label: "Tránsito" },
+                  { value: "cliente", label: "Cliente" },
+                  { value: "ajuste", label: "Ajuste" },
+                ],
+              },
+              { name: "parent", component: "input-datalist", label: "parent", optionsSource: "api://m/subject-almacen/inventory-internal-location?as=options&limite=1000" },
               { name: "segmento_codigo", component: "input-text", label: "segmento codigo" },
               { name: "nivel", component: "input-number", label: "nivel" },
               { name: "nivel_nombre", component: "input-text", label: "nivel nombre" },

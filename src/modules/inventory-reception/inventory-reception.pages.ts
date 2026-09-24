@@ -52,7 +52,7 @@ export const inventory_reception_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "estado", component: "input-text", label: "estado" },
               { name: "purchase_order_nombre", component: "input-text", label: "purchase order nombre" },
@@ -60,7 +60,7 @@ export const inventory_reception_pages: KirletPageDecl[] = [
               { name: "producto_id", component: "input-text", label: "producto id" },
               { name: "proveedor_nombre", component: "input-text", label: "proveedor nombre" },
               { name: "referencia", component: "input-text", label: "referencia" },
-              { name: "fecha_esperada", component: "input-text", label: "fecha esperada" },
+              { name: "fecha_esperada", component: "input-date", label: "fecha esperada" },
               { name: "total_esperado", component: "input-number", label: "total esperado" },
               { name: "total_recibido", component: "input-number", label: "total recibido" },
               { name: "documento_tipo", component: "input-text", label: "documento tipo" },
@@ -74,7 +74,7 @@ export const inventory_reception_pages: KirletPageDecl[] = [
               { name: "cantidad_esperada", component: "input-number", label: "cantidad esperada" },
               { name: "cantidad_recibida", component: "input-number", label: "cantidad recibida" },
               { name: "cantidad_acomodada", component: "input-number", label: "cantidad acomodada" },
-              { name: "costo_unitario", component: "input-number", label: "costo unitario" },
+              { name: "costo_unitario", component: "input-money", label: "costo unitario" },
               { name: "reservas", component: "input-json", label: "reservas" },
               { name: "purchase_order", component: "input-text", label: "purchase order" },
               { name: "proveedor", component: "input-text", label: "proveedor" },

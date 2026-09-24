@@ -52,11 +52,11 @@ export const inventory_physical_count_pages: KirletPageDecl[] = [
           form: {
             fields: [
               { name: "name", component: "input-text", label: "Nombre", required: true },
-              { name: "description", component: "input-text", label: "Descripción" },
+              { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
               { name: "ubicacion_codigo", component: "input-text", label: "ubicacion codigo" },
               { name: "estado", component: "input-text", label: "estado" },
-              { name: "fecha", component: "input-text", label: "fecha" },
+              { name: "fecha", component: "input-date", label: "fecha" },
               { name: "contado_por", component: "input-text", label: "contado por" },
               { name: "total_lineas", component: "input-text", label: "total lineas" },
               { name: "producto", component: "input-text", label: "producto" },
