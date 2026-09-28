@@ -48,6 +48,8 @@ export const inventory_cost_entry_module = define_module({
       producto: { type: "string", search: true },
       proveedor: { type: "string", search: true },
       proveedor_rfc: { type: "string", search: true },
+      lote: { type: "string", search: true },
+      lote_codigo: { type: "string", search: true },
     },
     options_map: { value: "id", label: "name" },
   }),

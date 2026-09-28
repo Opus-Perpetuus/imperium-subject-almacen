@@ -93,6 +93,14 @@
     {
       "id": "subject.almacen.inventory-movement.write",
       "label": "Editar Movimientos de inventario"
+    },
+    {
+      "id": "subject.almacen.inventory-lot.read",
+      "label": "Ver Lotes y series"
+    },
+    {
+      "id": "subject.almacen.inventory-lot.write",
+      "label": "Editar Lotes y series"
     }
   ],
   "menu": [
@@ -140,6 +148,15 @@
               "order": 20,
               "path": "inventory-stock-quant",
               "permission": "subject.almacen.inventory-stock-quant.read",
+              "icon": "document"
+            },
+            {
+              "id": "almacen.inventory-lot",
+              "label": "Lotes y series",
+              "pageId": "almacen.inventory-lot",
+              "order": 25,
+              "path": "inventory-lot",
+              "permission": "subject.almacen.inventory-lot.read",
               "icon": "document"
             },
             {
@@ -265,6 +282,11 @@
       "id": "almacen.inventory-movement",
       "path": "inventory-movement",
       "permission": "subject.almacen.inventory-movement.read"
+    },
+    {
+      "id": "almacen.inventory-lot",
+      "path": "inventory-lot",
+      "permission": "subject.almacen.inventory-lot.read"
     }
   ],
   "storage": {
@@ -281,6 +303,7 @@
     "inventory-reception": "inventory-reception",
     "pedidos": "pedidos",
     "pedidos-surtir": "pedidos-surtir",
-    "inventory-movement": "inventory-movement"
+    "inventory-movement": "inventory-movement",
+    "inventory-lot": "inventory-lot"
   }
 }

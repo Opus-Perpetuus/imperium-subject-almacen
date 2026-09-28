@@ -36,6 +36,8 @@ export const inventory_cost_entry_tables: KirletTableDecl[] = [
       { name: "producto", type: "text" },
       { name: "proveedor", type: "text" },
       { name: "proveedor_rfc", type: "text" },
+      { name: "lote", type: "text" },
+      { name: "lote_codigo", type: "text" },
     ],
     indexes: [
       { name: "idx_inventory_cost_entry_name", columns: ["name"] },

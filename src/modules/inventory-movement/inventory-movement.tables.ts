@@ -41,6 +41,9 @@ export const inventory_movement_tables: KirletTableDecl[] = [
       { name: "documento_id", type: "text" },
       { name: "documento_modelo", type: "text" },
       { name: "dedupe_key", type: "text" },
+      { name: "lote", type: "text" },
+      { name: "lote_codigo", type: "text" },
+      { name: "fecha_caducidad", type: "text" },
     ],
     indexes: [
       { name: "idx_inventory_movement_name", columns: ["name"] },

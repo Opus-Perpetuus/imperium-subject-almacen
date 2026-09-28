@@ -77,6 +77,15 @@ export const unit_of_measure_module = define_module({
           icon: "document",
         },
         {
+          id: "almacen.inventory-lot",
+          label: "Lotes y series",
+          order: 25,
+          pageId: "almacen.inventory-lot",
+          path: "inventory-lot",
+          permission: "subject.almacen.inventory-lot.read",
+          icon: "document",
+        },
+        {
           id: "almacen.inventory-physical-count",
           label: "Conteo físico",
           order: 30,

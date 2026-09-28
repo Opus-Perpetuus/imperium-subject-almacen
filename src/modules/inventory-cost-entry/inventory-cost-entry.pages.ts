@@ -74,6 +74,8 @@ export const inventory_cost_entry_pages: KirletPageDecl[] = [
               { name: "producto", component: "input-text", label: "producto" },
               { name: "proveedor", component: "input-text", label: "proveedor" },
               { name: "proveedor_rfc", component: "input-text", label: "proveedor rfc" },
+              { name: "lote", component: "input-text", label: "lote" },
+              { name: "lote_codigo", component: "input-text", label: "lote codigo" },
             ],
           },
         },

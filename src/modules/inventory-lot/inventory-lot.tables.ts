@@ -1,8 +1,8 @@
 import type { KirletTableDecl } from "@opus-perpetuus/imperium-core-kit";
 
-export const inventory_stock_quant_tables: KirletTableDecl[] = [
+export const inventory_lot_tables: KirletTableDecl[] = [
   {
-    name: "inventory_stock_quant",
+    name: "inventory_lot",
     columns: [
       { name: "id", type: "text", primaryKey: true },
       { name: "name", type: "text", notNull: true },
@@ -16,23 +16,22 @@ export const inventory_stock_quant_tables: KirletTableDecl[] = [
       { name: "payload", type: "json" },
       { name: "created_at", type: "text", notNull: true },
       { name: "updated_at", type: "text", notNull: true },
-      { name: "producto_nombre", type: "text" },
-      { name: "producto_codigo", type: "text" },
-      { name: "producto_id", type: "text" },
-      { name: "ubicacion_id", type: "text" },
-      { name: "ubicacion_codigo", type: "text" },
-      { name: "cantidad", type: "real" },
-      { name: "cantidad_apartada", type: "real" },
-      { name: "cantidad_disponible", type: "real" },
       { name: "producto", type: "text" },
-      { name: "ubicacion", type: "text" },
-      { name: "lote", type: "text" },
-      { name: "lote_codigo", type: "text" },
+      { name: "producto_codigo", type: "text" },
+      { name: "producto_nombre", type: "text" },
+      { name: "tipo", type: "text" },
       { name: "fecha_caducidad", type: "text" },
+      { name: "fecha_recepcion", type: "text" },
+      { name: "proveedor", type: "text" },
+      { name: "proveedor_nombre", type: "text" },
+      { name: "orden_compra", type: "text" },
+      { name: "recepcion", type: "text" },
+      { name: "cantidad_recibida", type: "real" },
     ],
     indexes: [
-      { name: "idx_inventory_stock_quant_name", columns: ["name"] },
-      { name: "idx_inventory_stock_quant_active", columns: ["is_active"] },
+      { name: "idx_inventory_lot_name", columns: ["name"] },
+      { name: "idx_inventory_lot_active", columns: ["is_active"] },
+      { name: "idx_inventory_lot_producto", columns: ["producto"] },
     ],
   },
 ];

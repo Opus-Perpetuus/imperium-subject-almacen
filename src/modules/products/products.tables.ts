@@ -41,6 +41,9 @@ export const products_tables: KirletTableDecl[] = [
       { name: "ubicacion_preferida_codigo", type: "text" },
       { name: "proveedor", type: "text" },
       { name: "proveedor_nombre", type: "text" },
+      { name: "maneja_lote", type: "boolean" },
+      { name: "maneja_serial", type: "boolean" },
+      { name: "tiene_caducidad", type: "boolean" },
     ],
     indexes: [
       { name: "idx_products_name", columns: ["name"] },
