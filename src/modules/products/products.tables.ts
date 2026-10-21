@@ -44,6 +44,11 @@ export const products_tables: KirletTableDecl[] = [
       { name: "maneja_lote", type: "boolean" },
       { name: "maneja_serial", type: "boolean" },
       { name: "tiene_caducidad", type: "boolean" },
+      // Reglas de venta del POS (listas JSON; vacías = sin cambio).
+      { name: "precios_escala", type: "json" },
+      { name: "promociones", type: "json" },
+      { name: "conversiones_unidad", type: "json" },
+      { name: "kit_componentes", type: "json" },
     ],
     indexes: [
       { name: "idx_products_name", columns: ["name"] },
