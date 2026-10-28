@@ -54,7 +54,12 @@ export const inventory_reception_pages: KirletPageDecl[] = [
               { name: "name", component: "input-text", label: "Nombre", required: true },
               { name: "description", component: "input-textarea", label: "Descripción" },
               { name: "ref", component: "input-text", label: "Referencia (_ref)" },
-              { name: "estado", component: "input-text", label: "estado" },
+              {
+                name: "estado",
+                component: "input-status",
+                label: "estado",
+                // Opciones: status-option-control (seed en status-seeds.ts).
+              },
               { name: "purchase_order_nombre", component: "input-text", label: "purchase order nombre" },
               { name: "purchase_order_id", component: "input-text", label: "purchase order id" },
               { name: "producto_id", component: "input-text", label: "producto id" },

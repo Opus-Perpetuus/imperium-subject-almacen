@@ -57,15 +57,9 @@ export const inventory_internal_location_pages: KirletPageDecl[] = [
               { name: "codigo", component: "input-text", label: "codigo" },
               {
                 name: "tipo",
-                component: "input-menu",
+                component: "input-status",
                 label: "tipo",
-                options: [
-                  { value: "almacen", label: "Almacén" },
-                  { value: "logistica", label: "Logística" },
-                  { value: "transito", label: "Tránsito" },
-                  { value: "cliente", label: "Cliente" },
-                  { value: "ajuste", label: "Ajuste" },
-                ],
+                // Opciones: status-option-control (seed en status-seeds.ts). RAW_DEFAULTS: tipo.
               },
               { name: "parent", component: "input-datalist", label: "parent", optionsSource: "api://m/subject-almacen/inventory-internal-location?as=options&limite=1000" },
               { name: "segmento_codigo", component: "input-text", label: "segmento codigo" },

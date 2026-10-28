@@ -59,7 +59,12 @@ export const inventory_movement_pages: KirletPageDecl[] = [
               { name: "producto_id", component: "input-text", label: "producto id" },
               { name: "ubicacion_origen_id", component: "input-text", label: "ubicacion origen id" },
               { name: "ubicacion_destino_id", component: "input-text", label: "ubicacion destino id" },
-              { name: "tipo_movimiento", component: "input-text", label: "tipo movimiento" },
+              {
+                name: "tipo_movimiento",
+                component: "input-status",
+                label: "tipo movimiento",
+                // Opciones: status-option-control (seed en status-seeds.ts). RAW read_only.
+              },
               { name: "ubicacion_origen_nombre", component: "input-text", label: "ubicacion origen nombre" },
               { name: "ubicacion_destino_nombre", component: "input-text", label: "ubicacion destino nombre" },
               { name: "documento_tipo", component: "input-text", label: "documento tipo" },
