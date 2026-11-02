@@ -39,7 +39,8 @@ export const inventory_physical_count_module = define_module({
       cantidad_sistema: { type: "number" },
       cantidad_contada: { type: "number" },
       diferencia: { type: "number" },
-      ubicacion: { type: "string", search: true },
+      // Catálogo de ubicaciones del almacén (pasillo/rack), no un domicilio.
+      ubicacion: { type: "string", search: true, field_values: true },
       lineas: { type: "json" },
     },
     options_map: { value: "id", label: "name" },

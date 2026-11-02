@@ -37,7 +37,8 @@ export const inventory_stock_quant_module = define_module({
       cantidad_apartada: { type: "number" },
       cantidad_disponible: { type: "number" },
       producto: { type: "string", search: true },
-      ubicacion: { type: "string", search: true },
+      // Catálogo de ubicaciones del almacén (pasillo/rack), no un domicilio.
+      ubicacion: { type: "string", search: true, field_values: true },
       lote: { type: "string", search: true },
       lote_codigo: { type: "string", search: true },
       fecha_caducidad: { type: "string", search: true },
